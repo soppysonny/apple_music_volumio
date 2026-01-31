@@ -112,7 +112,9 @@ class Player extends Component {
     });
   };
 
-  tickLabel = Utils.durationSeconds;
+  tickLabel = (seconds) => {
+    return Utils.durationSeconds(seconds);
+  };
 
   hoverTime = event => {
     var rect = this.slider.current.getBoundingClientRect();
